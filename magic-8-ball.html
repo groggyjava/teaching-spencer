@@ -1,0 +1,55 @@
+<html>
+<!-- Simple old-school web page I built as an instructional aid
+     to show how HTML/CSS/Javascript interact -->
+
+<head>
+  <title>Magic Eight Ball</title>
+  <style type="text/css">
+    body {
+      font-size: 36px;
+    }
+
+    #container {
+      width: 500px;
+      text-align: center;
+    }
+
+    .headline {
+      font-size: 48px;
+      color: indigo;
+    }
+
+    #answer {
+      color: #aaa;
+    }
+  </style>
+  <script type="text/javascript">
+    var responses = [
+      "No way Jose!!!",
+      "Sorta/Kinda",
+      "*Shrugs Shoulders*",
+      "WTH is wrong with you?",
+      "Oh Hell YESS!!",
+      "For you ONE DOLLAR!!!"
+    ];
+
+    function AskTheEightBall() {
+      var answerDiv = document.getElementById("answer");
+      var num = Math.floor(Math.random() * 6);
+      answerDiv.innerText = responses[num];
+    }
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="eight-ball">
+      <div class="headline">Magic Eight Ball, Yo</div>
+      <div id="answer">Your Answer</div>
+      <div id="button"><button class="magic-button" onclick="AskTheEightBall();">Ask the Magic Eight Ball!!</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
